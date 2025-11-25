@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сітка зображень 3x2</title>
+  <style>
+    :root {
+      --gap: 16px;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin: 24px;
+      background: #f7f7f7;
+      color: #111;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 220px;
+      gap: var(--gap);
+    }
+
+    .grid-item {
+      overflow: hidden;
+      border-radius: 8px;
+      background: #ddd;
+      display: block;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Сітка зображень 3×2</h1>
+    <div class="grid">
+      <a class="grid-item" href="#">
+        <img src="https://picsum.photos/id/1015/800/600" alt="Зображення 1">
+      </a>
+      <a class="grid-item" href="#">
+        <img src="https://picsum.photos/id/1016/800/600" alt="Зображення 2">
+      </a>
+      <a class="grid-item" href="#">
+        <img src="https://picsum.photos/id/1018/800/600" alt="Зображення 3">
+      </a>
+      <a class="grid-item" href="#">
+        <img src="https://picsum.photos/id/1020/800/600" alt="Зображення 4">
+      </a>
+      <a class="grid-item" href="#">
+        <img src="https://picsum.photos/id/1024/800/600" alt="Зображення 5">
+      </a>
+      <a class="grid-item" href="#">
+        <img src="https://picsum.photos/id/1027/800/600" alt="Зображення 6">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
